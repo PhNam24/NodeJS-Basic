@@ -10,7 +10,7 @@
 }
 
 .nav a{
-    font-size: 20px;
+    font-size: 16px;
     float: left;
     text-align: center;
     color: #f2f2f2;
@@ -28,35 +28,43 @@
     background-color: #04AA6D;
 }   
 
+.body form{
+    display: inline-block;
+}
+
 button{
     padding: 0 4px;
+}
+
+.table{
+    font-size: 14px;
 }
 
 .table a{
     text-decoration: none;
 }
 
-.form{
+.change{
     text-align: center;
 }
 
-.form h2{
-    font-size: 24px;
+h2{
+    font-size: 20px;
     font-weight: 500;
 }
 
-.form label{
+.change label{
     display: block;
 }
 
-.form input{
+.change input{
     padding: 2px 8px;
     width: 300px;
     font-size: 16px;
     line-height: 1.6;
 }
 
-.form button{
+.change button{
     margin-top: 16px;
     cursor: pointer;
 }

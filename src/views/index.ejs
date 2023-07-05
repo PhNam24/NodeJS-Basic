@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NodeJS Basic</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -33,33 +33,38 @@
                         <td><%= dataUsers[i].firstName %></td>
                         <td><%= dataUsers[i].lastName %></td>
                         <td>
-                            <button> <a href="/detail/user/<%= dataUsers[i].id %>">Details</a></button>
-                            <button><a href="">Edit</a></button>
-                            <button><a href="">Delete</a></button>
+                            <button><a href="/detail/user/<%= dataUsers[i].id %>">Details</a></button>
+                            <button><a href="/edit/user/<%= dataUsers[i].id %>">Edit</a></button>
+                            <form action="/delete-user" method="post">
+                                <div>
+                                    <input type="text" name="id" value="<%= dataUsers[i].id %>" class="delete-input" hidden>
+                                    <button type="submit">Delete</button>
+                                </div>
+                            </form>
                         </td>
                     </tr>
                 <% } %>
             </table>
         </div> 
 
-        <div class="form">
+        <div class="create change">
             <h2>Add New User</h2>
             <form action="/create-new-user" method="post">
                 <div>
                     <label for="">First Name</label>
-                    <input type="text" name="firstName">
+                    <input type="text" name="firstName" required>
                 </div>
                 <div>
                     <label for="">Last Name</label>
-                    <input type="text" name="lastName">
+                    <input type="text" name="lastName" required>
                 </div>
                 <div>
                     <label for="">Email</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" required>
                 </div>
                 <div>
                     <label for="">Address</label>
-                    <input type="text" name="address">
+                    <input type="text" name="address" required>
                 </div>
     
                 <div>
@@ -69,7 +74,5 @@
             
         </div>
     </div>
-   
-      
 </body>
 </html>

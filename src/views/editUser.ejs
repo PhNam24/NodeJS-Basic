@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="edit change">
+        <h2>Edit User</h2>
+            <form action="/update-user" method="post">
+                <input type="text" name="id" value="<%= user.id %>" class="edit-input" hidden>
+                <div>
+                    <label for="">First Name</label>
+                    <input type="text" name="firstName" value="<%= user.firstName %>" required >
+                </div>
+                <div>
+                    <label for="">Last Name</label>
+                    <input type="text" name="lastName" value="<%= user.lastName %>" required>
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" name="email" value="<%= user.email %>" required>
+                </div>
+                <div>
+                    <label for="">Address</label>
+                    <input type="text" name="address" value="<%= user.address %>" required>
+                </div>   
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+     </div> 
+</body>
+</html>
