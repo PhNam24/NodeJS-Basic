@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="/" class = "btn">Home</a>
+        <a href="/upload-page" class = "btn active" >Upload File</a>
+    </div>
+
+    <div class="body">
+        <form action="/upload-files" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="">Pictures: </label>
+                <input type="file" name="files">
+            </div>
+
+            <div>
+                <button type="submit">Save Files</button>
+            </div>
+        </form>
+
+        <form action="/upload-files" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="">Pictures: </label>
+                <input type="file" name="files" multiple>
+            </div>
+
+            <div>
+                <button type="submit">Save Files</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

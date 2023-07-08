@@ -10,6 +10,10 @@ const initWebRoute = (app) => {
     router.post('/delete-user', homeController.deleteUser);
     router.get('/edit/user/:userID', homeController.editUser);
     router.post('/update-user', homeController.updateUser);
+
+    //Upload File
+    router.get('/upload-page', homeController.uploadPage);
+    router.post('upload-files', homeController.uploadFile)
     return app.use('/', router); 
 }
 

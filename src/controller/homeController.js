@@ -1,3 +1,4 @@
+import { response } from "express";
 import pool from "../configs/connectDataBase";
 
 let getHomepage = async (req, res) => {
@@ -36,6 +37,14 @@ let updateUser = async (req, res) => {
     return res.redirect('/');
 }
 
+let uploadPage = async (req, res) => {
+    return res.render('uploadPage.ejs');
+}
+
+let uploadFile = async (req, res) => {
+    return res.send('hello');
+}
+
 module.exports = {
-    getHomepage, getDetailPage, createNewUser, deleteUser, editUser, updateUser
+    getHomepage, getDetailPage, createNewUser, deleteUser, editUser, updateUser, uploadPage, uploadFile
 }
